@@ -4,23 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>edi*tor</title>
+  <title>abcxyz*test</title>
 
   <style>
 
 
+
+  @font-face {
+  font-family: "g";
+  src:url("g.woff") format("woff");
+  src:url("g.woff2") format("woff2"),
+  src: url("g.eot");
+  src: url("g.otf") format("opentype"),
+
+  }
+
     body{
       background-color:green;
-
     }
 
+    h1   {color: white;}
+    b   {color: white;}
+    p    {color: white;}
+
+
+
     div.typeEditor{
+      position: absolute;
       margin: 0 auto;
       width:750px;
       /*max width: 750px*/
       height:300px;
-      -webkit-filter: drop-shadow(2px 2px 5px red);
-      filter: drop-shadow(2px 2px 5px red);
+      -webkit-filter: drop-shadow(1px 2px 15px red);
+      filter: drop-shadow(5px 2px 15px red);
 
     }
     div.theRibbon{
@@ -29,6 +45,7 @@
       background-color: ;
       color:white;
       border-radius: 1em;
+      width:200px;
 
 
 
@@ -39,6 +56,7 @@
       filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
 
   }
+
     div.theRibbon:hover{
       -webkit-filter: blur(0px);
       -moz-filter: blur(0px);
@@ -50,6 +68,9 @@
       -webkit-animation: AnimationName 5s ease infinite;
       -moz-animation: AnimationName 5s ease infinite;
       animation: AnimationName 5s ease infinite;
+    }
+    .List > theRibbon{
+
     }
 
     @-webkit-keyframes AnimationName {
@@ -102,14 +123,13 @@
       width: 746px;
       background-color:white;*/
     }
+
+
     iframe#theWYSIWYG{
       height:100%;
       width:100%
     }
-    @font-face{
-        font-family:'geegee';
-        src:url('geegee.wtf')
-      }
+
   .editable {
   width: 730px;
   height: 300px;
@@ -120,18 +140,38 @@
   padding-top:0px;
   background: white;
   color:red;
-  font-family:'geegee';
+  font-family:'g';
+  font-weight:normal;
+  fibt-style:normal;
   font-size:25px;
-  cursor: url('jk.svg'),auto;
+  cursor: url("smiley.png") auto;
 }
 
-
+textarea#styled {
+width: 120%;
+height: 200px;
+border: 1px solid red;
+padding: 5px;
+font-family: geegee, sans-serif;
+font-size: 45px;
+text-align:left;
+color: red;
+letter-spacing: 4px;
+text-transform: uppercase;
+background-color: black;
+background-position: bottom right;
+background-repeat: no-repeat;
+cursor: url("smiley.svg"), auto;
+}
 
   </style>
 
 
 </head>
 <body>
+    <b>abcxyz.wtf</b>
+    purchase   goods   info<p>
+
     <div class="typeEditor" draggable="true">
 
     <div class="theRibbon">
@@ -153,18 +193,61 @@
 
       </textarea>
 
+    <br><br><br><br>
 
+    <div class="richTextArea">
+      <div class="theRibbon">
+        <button>GeeGee</button>
+        <button id="size">size</button>
+          <input type="color" id="fontColorButton" title="Font color">
+        <input type="color" id="TypeboxColor" title="Typebox color">
+
+      </div>
+    <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');"
+    onblur="setbg('white')"> Casual Script: a font which imitated the style of hand-lettered comics. It is unashamedly irreverent and unsophisticated. However, it is aimed at children and some users enjoy the optimistic informality of it.
+    </textarea>
     </div>
+  <br><br>
+    <div class="theRibbon">
+      <button>GeeGee</button>
+      <button id="size">size</button>
+        <input type="color" id="fontColorButton" title="Font color">
+      <input type="color" id="TypeboxColor" title="Typebox color">
+    <!--  <select id=fontSizeChanger">
+        <script>
+          for(var i = 8; i < 50; i++) {
+            document.write("<option value=' "+i+"'>"+i+"</option>");
+          }
+      </script>-->
+    </div>
+
+
+
+    <div class="richTextArea">
+      <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
+      <textarea class="editable" style="background-color:lightblue"> To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. In the late 90s, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. </textarea>
 
 
 
 
   </div>
+<br><br>
 
+  <div class="richTextArea">
+    <div class="theRibbon">
+      <button>GeeGee</button>
+      <button id="size">size</button>
+        <input type="color" id="fontColorButton" title="Font color">
+      <input type="color" id="TypeboxColor" title="Typebox color">
 
+    </div>
+  <textarea style="background-color:yellow" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');"
+  onblur="setbg('white')"> In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
+programs have fixed shape and positioning for each glyph. Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+  </textarea>
+  </div>
 
-
-
+<br><br>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
