@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>edi*tor</title>
+
+  <style>
+
+
+    body{
+      background-color:green;
+
+    }
+
+    div.typeEditor{
+      margin: 0 auto;
+      width:750px;
+      /*max width: 750px*/
+      height:300px;
+      -webkit-filter: drop-shadow(2px 2px 5px red);
+      filter: drop-shadow(2px 2px 5px red);
+
+    }
+    div.theRibbon{
+      border-bottom: none;
+      padding:4px;
+      background-color: ;
+      color:white;
+      border-radius: 1em;
+
+
+
+    /*-webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
+
+  }
+    div.theRibbon:hover{
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+      transition: 1s;
+      background-color:red ;
+      -webkit-animation: AnimationName 5s ease infinite;
+      -moz-animation: AnimationName 5s ease infinite;
+      animation: AnimationName 5s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0%{background-color:0% 82%}
+        50%{background-color:100% 19%}
+        100%{background-color:0% 82%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-color:0% 82%}
+        50%{background-color:100% 19%}
+        100%{background-color:0% 82%}
+    }
+    @keyframes AnimationName {
+        0%{background-color:0% 82%}
+        50%{background-color:100% 19%}
+        100%{background-color:0% 82%}
+    }
+
+    div.theRibbon > button:hover{
+      background-color: black;
+      transition: all 0.3s linear 0s;
+    }
+
+        input[type=color] {
+        width: 20px;
+        height: 15px;
+        border-radius: 50%;
+        border:0px;
+        outline:none;
+        overflow: hidden;
+        /*background-color:transparent;*/
+
+        }
+
+        input[type=color]::-webkit-color-swatch {
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+        }
+
+        input[type=color]::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+        }
+
+    /*div.richTextArea{
+      border: 1.5px solid red;
+      height: 100%;
+      width: 746px;
+      background-color:white;*/
+    }
+    iframe#theWYSIWYG{
+      height:100%;
+      width:100%
+    }
+    @font-face{
+        font-family:'geegee';
+        src:url('m.woff2')
+      }
+  .editable {
+  width: 730px;
+  height: 300px;
+  border: 1px solid red;
+  overflow: auto;
+  padding: 10px;
+  padding-bottom:0px;
+  padding-top:0px;
+  background: white;
+  color:red;
+  font-family:'geegee';
+  font-size:25px;
+  cursor: url('jk.svg'),auto;
+}
+
+
+
+  </style>
+
+
+</head>
+<body>
+    <div class="typeEditor" draggable="true">
+
+    <div class="theRibbon">
+      <button>GeeGee</button>
+      <button id="size">size</button>
+        <input type="color" id="fontColorButton" title="Font color">
+      <input type="color" id="TypeboxColor" title="Typebox color">
+    <!--  <select id=fontSizeChanger">
+        <script>
+          for(var i = 8; i < 50; i++) {
+            document.write("<option value=' "+i+"'>"+i+"</option>");
+          }
+      </script>-->
+    </div>
+
+    <div class="richTextArea">
+      <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
+      <textarea class="editable"> Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively. The
+
+      </textarea>
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</html>
