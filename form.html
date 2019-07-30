@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test form</title>
+</head>
+<body>
+  <form name="checkoutForm" method="POST" action="checkout.php">
+   <input type="text" name="email" />
+
+   <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+     data-key="pkey_test_5841eqedyaa3ukn3i9a"
+     data-image="https://cdn.omise.co/assets/dashboard/images/omise-logo.png"
+     data-amount="99500"
+     data-currency="thb"
+     data-button-label="Pay now"
+     data-frame-label="Example 2"
+     data-submit-label="Checkout">
+   </script>
+ </form>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdn.omise.co/omise.js"></script>
+  <script>
+  (function($) {
+    Omise.setPublicKey('pkey_test_1234556788990');
+
+    var checkoutForm = $("#new_order");
+    checkoutForm.on('submit', submitHandler);
+
+    function submitHandler(event) {
+      event.preventDefault();
+
+      var expiry = $('[data-name="expiry"').val();
+      var expiry_array = expiry.split(" / ");
+      var expiry_month = expiry_array[0];
+      var expiry_year = "20" + expiry_array[1];
+
+      var cardObject = {
+        name: $('[data-name="name"')[0].value,
+        number: $('[data-name="number"')[0].value,
+        expiration_month: expiry_month,
+        expiration_year:  expiry_year,
+        security_code: $('[data-name="cvc"')[0].value
+      };
+
+      $('[data-name="number"').val('');
+      $('[data-name="cvc"').val('');
+      $('[data-name="expiry"').val('');
+
+      Omise.createToken('card', cardObject, function(statusCode, response) {
+        if (statusCode === 200) {
+          checkoutForm.find('[name="omiseToken"]').val(response.id);
+          checkoutForm.submit();
+        }
+        else {
+          alert(response.message);
+        }
+      });
+    }
+  })(jQuery);
+  </script>
+
+</body>
+</html>

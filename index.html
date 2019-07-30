@@ -10,6 +10,8 @@
 
 
 
+
+
   @font-face {
   font-family: "g";
   src:url("g.woff") format("woff");
@@ -20,7 +22,8 @@
   }
 
     body{
-      background-color:green;
+
+      background-color:white;
     }
 
     h1   {color: white;}
@@ -32,6 +35,7 @@
     div.typeEditor{
       position: absolute;
       margin: 0 auto;
+      margin-left: 2%;
       width:750px;
       /*max width: 750px*/
       height:300px;
@@ -45,7 +49,7 @@
       background-color: ;
       color:white;
       border-radius: 1em;
-      width:200px;
+      width:300px;
 
 
 
@@ -57,7 +61,7 @@
 
   }
 
-    div.theRibbon:hover{
+    /*div.theRibbon:hover{
       -webkit-filter: blur(0px);
       -moz-filter: blur(0px);
       -o-filter: blur(0px);
@@ -68,9 +72,9 @@
       -webkit-animation: AnimationName 5s ease infinite;
       -moz-animation: AnimationName 5s ease infinite;
       animation: AnimationName 5s ease infinite;
-    }
-    .List > theRibbon{
-
+    }*/
+    .List > div.theRibbon {
+      background-color:red;
     }
 
     @-webkit-keyframes AnimationName {
@@ -90,7 +94,7 @@
     }
 
     div.theRibbon > button:hover{
-      background-color: black;
+      background-color: white;
       transition: all 0.3s linear 0s;
     }
 
@@ -134,15 +138,16 @@
   width: 730px;
   height: 300px;
   border: 1px solid red;
-  overflow: auto;
+  /*overflow: auto;*/
+  overflow: scroll;
+  overflow-x: hidden;
   padding: 10px;
   padding-bottom:0px;
   padding-top:0px;
   background: white;
   color:red;
-  font-family:'g';
-  font-weight:normal;
-  fibt-style:normal;
+  font-family:"g",sans-serif;
+font-weight: normal;
   font-size:25px;
   cursor: url("smiley.png") auto;
 }
@@ -152,13 +157,13 @@ width: 120%;
 height: 200px;
 border: 1px solid red;
 padding: 5px;
-font-family: geegee, sans-serif;
+font-family: "g", "GeeGee", sans-serif;
 font-size: 45px;
 text-align:left;
-color: red;
+color: black;
 letter-spacing: 4px;
 text-transform: uppercase;
-background-color: black;
+background-color: white;
 background-position: bottom right;
 background-repeat: no-repeat;
 cursor: url("smiley.svg"), auto;
@@ -225,7 +230,7 @@ cursor: url("smiley.svg"), auto;
 
     <div class="richTextArea">
       <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable" style="background-color:lightblue"> To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. In the late 90s, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. </textarea>
+      <textarea class="editable" style="background-color:black"> To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. In the late 90s, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. </textarea>
 
 
 
@@ -240,14 +245,50 @@ cursor: url("smiley.svg"), auto;
         <input type="color" id="fontColorButton" title="Font color">
       <input type="color" id="TypeboxColor" title="Typebox color">
 
+      <form name="checkoutForm" method="POST" data-netlify="true" action="/checkout">
+      <input type="text" placeholder="enter email" name="email" />
+
+      <form class="checkout-form" name="checkoutForm"  method="POST" action="checkout.php">
+       <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+               data-key="YOUR_PUBLIC_KEY"
+               data-frame-label="ABCXYZ.WTF"
+               data-frame-description="GeeGee Typeface"
+               data-default-payment-method="internet_banking"
+               data-other-payment-methods="credit_card, paypal, bill_payment_tesco_lotus, alipay, pay_easy,  convenience_store"
+               data-amount="10"
+               data-currency="usd"
+               data-button-label="Purchase">
+       </script>
+     </form>
+
+
+
+
     </div>
-  <textarea style="background-color:yellow" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');"
+  <textarea style="background-color:white" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
   onblur="setbg('white')"> In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
 programs have fixed shape and positioning for each glyph. Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
   </textarea>
   </div>
 
+
+
+
 <br><br>
+
+<!--<form name="Purchase" method="POST" data-netlify="true" action="editor_animated.html">
+  <p>
+    <label style="font-color:black,font-weight:bold">Name: <input type="text" name="name" /></label>
+
+    <label>Email: <input type="email" name="email" /></label>
+  </p>
+    <button type="submit">Send</button>
+  </p>*/ -->
+
+
+     <br>
+     <br>
+</form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
