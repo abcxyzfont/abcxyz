@@ -4,33 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>abcxyz*test</title>
+  <title>abcxyz.wtfs</title>
 
   <style>
+                      @font-face {
+                      font-family: "g";
+                      src:url('g.woff') format("woff"),url("g.woff2") format("woff2"),
+                      url("g.eot"),url("g.otf") format("opentype");
+                      }
 
+                      @font-face {
+                      font-family: "c";
+                      src:url('c.otf')
+                      }
 
+                      @font-face {
+                      font-family: "e";
+                      src:url('e.otf')
+                      }
 
+                      @font-face {
+                      font-family: "s";
+                      src:url('s.otf')
+                      }
 
+                      @font-face {
+                      font-family: "m";
+                      src:url('m.otf')
+                      }
 
-  @font-face {
-  font-family: "g";
-  src:url("g.woff") format("woff"),url("g.woff2") format("woff2"),
-  url("g.eot"),url("g.otf") format("opentype");
-  }
-
-  @font-face {
-  font-family: "c";
-  src:url("Corner-Regular.woff2") format("woff2"),
-  }
-
+                      @font-face {
+                      font-family: "r";
+                      src:url('r.otf')
+                      }
     body{
-
-      background-color:white;
+    background-color:white;
     }
 
-    h1   {color: white;}
-    b   {color: white;}
-    p    {color: white;}
+    textarea.E{
+    font-family: "e" ,
+    }
 
 
 
@@ -75,9 +88,7 @@
       -moz-animation: AnimationName 5s ease infinite;
       animation: AnimationName 5s ease infinite;
     }*/
-    .List > div.theRibbon {
-      background-color:red;
-    }
+
 
     @-webkit-keyframes AnimationName {
         0%{background-color:0% 82%}
@@ -96,8 +107,11 @@
     }
 
     div.theRibbon > button:hover{
-      background-color: white;
-      transition: all 0.3s linear 0s;
+
+      -webkit-filter: drop-shadow(5px 5px 10px red);
+      filter: drop-shadow(5px 5px 10px red );
+      transition: all 0.5s ;
+
     }
 
         input[type=color] {
@@ -148,18 +162,53 @@
   padding-top:0px;
   background: white;
   color:white;
-  font-family:"c",sans-serif;
+  font-family:"c";
   font-weight: normal;
-  font-size:25px;
+  font-size:60px;
   cursor: url("smiley.png") auto;
+}
+
+.editable2 {
+width: 720px;
+height: 300px;
+border: 1px solid black;
+/*overflow: auto;*/
+overflow: scroll;
+overflow-x: hidden;
+padding: 10px;
+padding-bottom:0px;
+padding-top:0px;
+background: white;
+color:white;
+font-family:"e";
+font-weight: normal;
+font-size:80px;
+cursor: url("smiley.png") auto;
 }
 
 textarea#styled {
 width: 120%;
-height: 200px;
+height: 230px;
 border: 1px solid black;
 padding: 5px;
 font-family: "g", "GeeGee", sans-serif;
+font-size: 45px;
+text-align:left;
+color: black;
+letter-spacing: 4px;
+text-transform: uppercase;
+background-color: white;
+background-position: bottom right;
+background-repeat: no-repeat;
+cursor: url("smiley.svg"), auto;
+}
+
+#silver{
+width: 140%;
+height: 220px;
+border: 1px solid black;
+padding: 5px;
+font-family: "s", sans-serif;
 font-size: 45px;
 text-align:left;
 color: black;
@@ -176,8 +225,7 @@ cursor: url("smiley.svg"), auto;
 
 </head>
 <body>
-    <b>abcxyz.wtf</b>
-    purchase   goods   info<p>
+    ____<b>abcxyz.wtf</b> __purchase__goods__info~<p>
 
     <div class="typeEditor" draggable="true">
 
@@ -196,7 +244,7 @@ cursor: url("smiley.svg"), auto;
 
     <div class="richTextArea">
       <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable" style="color:black"> Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively. The
+      <textarea class="editable" style="color:black">Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively.
 
       </textarea>
 
@@ -211,10 +259,27 @@ cursor: url("smiley.svg"), auto;
 
       </div>
     <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');"
-    onblur="setbg('white')"> Casual Script: a font which imitated the style of hand-lettered comics. It is unashamedly irreverent and unsophisticated. However, it is aimed at children and some users enjoy the optimistic informality of it.
+    onblur="setbg('white')">Casual Script: a font which imitated the style of hand-lettered comics. It is unashamedly irreverent and unsophisticated. However, it is aimed at children and some users enjoy the optimistic informality of it.
     </textarea>
     </div>
   <br><br>
+  <div class="richTextArea" >
+    <div class="theRibbon">
+      <button>Silvermoon's Sparklin</button>
+      <button id="size">size</button>
+        <input type="color" id="fontColorButton" title="Font color">
+      <input type="color" id="TypeboxColor" title="Typebox color">
+
+    </div>
+  <Textarea name="styled-textarea" editable="true" id="silver" onfocus="this.value=''; setbg('#e5fff3');"
+  onblur="setbg('white')" >Casual Script: a font which imitated the style of hand-lettered comics.
+  It is unashamedly irreverent and unsophisticated.
+</textarea>
+  </div>
+
+<br><br>
+
+
     <div class="theRibbon">
       <button>GeeGee</button>
       <button id="size">size</button>
@@ -232,7 +297,7 @@ cursor: url("smiley.svg"), auto;
 
     <div class="richTextArea">
       <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable" style="background-color:black"> To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. In the late 90s, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. </textarea>
+      <textarea class="editable2" style="background-color:black;" >In the late 90's, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. </textarea>
 
 
 
@@ -268,34 +333,48 @@ cursor: url("smiley.svg"), auto;
 
 
     </div>
-  <textarea style="background-color:white" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
-  onblur="setbg('white')"> In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
+  <textarea style="background-color:white; font-family:'m'; width:700px;height:150px " name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
+  onblur="setbg('white')">In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
 programs have fixed shape and positioning for each glyph. Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+  </textarea>
+  </div>
+
+<!--four-->
+  <br><br><br><br>
+
+  <div class="richTextArea">
+    <div class="theRibbon">
+      <button>GeeGee</button>
+      <button id="size">size</button>
+        <input type="color" id="fontColorButton" title="Font color">
+      <input type="color" id="TypeboxColor" title="Typebox color">
+
+      <form name="checkoutForm" method="POST" data-netlify="true" action="/checkout">
+      <input type="text" placeholder="enter email" name="email" />
+       </script>
+     </form>
+
+
+
+
+
+    </div>
+  <textarea style="background-color:white; font-family:'r';font-size:90px;width:900px" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
+  onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
   </textarea>
   </div>
 
 
 
-
-<br><br>
-
-<!--<form name="Purchase" method="POST" data-netlify="true" action="editor_animated.html">
-  <p>
-    <label style="font-color:black,font-weight:bold">Name: <input type="text" name="name" /></label>
-
-    <label>Email: <input type="email" name="email" /></label>
-  </p>
-    <button type="submit">Send</button>
-  </p>*/ -->
-  <form name="contact" method="POST" data-netlify="true" action="checkout.php">
-    <p>
-      <label>Name: <input type="text" name="name" /></label>
-      <label>Email: <input type="email" name="email" /></label>
-<button type="submit">Send</button>
-  </form>
-
      <br>
      <br>
+     <form name="contact" method="POST" data-netlify="true" action="checkout.php">
+       <p>
+         <label>Name: <input type="text" name="name" /></label>
+         <label>Email: <input type="email" name="email" /></label>
+   <button type="submit">Send</button>
+     </form>
+     <br><br>
 </form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
