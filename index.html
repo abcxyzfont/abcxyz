@@ -14,11 +14,13 @@
 
   @font-face {
   font-family: "g";
-  src:url("g.woff") format("woff");
-  src:url("g.woff2") format("woff2"),
-  src: url("g.eot");
-  src: url("g.otf") format("opentype"),
+  src:url("g.woff") format("woff"),url("g.woff2") format("woff2"),
+  url("g.eot"),url("g.otf") format("opentype");
+  }
 
+  @font-face {
+  font-family: "c";
+  src:url("Corner-Regular.woff2") format("woff2"),
   }
 
     body{
@@ -39,8 +41,8 @@
       width:750px;
       /*max width: 750px*/
       height:300px;
-      -webkit-filter: drop-shadow(1px 2px 15px red);
-      filter: drop-shadow(5px 2px 15px red);
+      -webkit-filter: drop-shadow(5px 5px 15px black);
+      filter: drop-shadow(5px 5px 15px black );
 
     }
     div.theRibbon{
@@ -137,7 +139,7 @@
   .editable {
   width: 730px;
   height: 300px;
-  border: 1px solid red;
+  border: 1px solid black;
   /*overflow: auto;*/
   overflow: scroll;
   overflow-x: hidden;
@@ -145,9 +147,9 @@
   padding-bottom:0px;
   padding-top:0px;
   background: white;
-  color:red;
-  font-family:"g",sans-serif;
-font-weight: normal;
+  color:white;
+  font-family:"c",sans-serif;
+  font-weight: normal;
   font-size:25px;
   cursor: url("smiley.png") auto;
 }
@@ -155,7 +157,7 @@ font-weight: normal;
 textarea#styled {
 width: 120%;
 height: 200px;
-border: 1px solid red;
+border: 1px solid black;
 padding: 5px;
 font-family: "g", "GeeGee", sans-serif;
 font-size: 45px;
@@ -194,7 +196,7 @@ cursor: url("smiley.svg"), auto;
 
     <div class="richTextArea">
       <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable"> Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively. The
+      <textarea class="editable" style="color:black"> Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively. The
 
       </textarea>
 
@@ -264,6 +266,7 @@ cursor: url("smiley.svg"), auto;
 
 
 
+
     </div>
   <textarea style="background-color:white" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
   onblur="setbg('white')"> In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
@@ -284,7 +287,7 @@ programs have fixed shape and positioning for each glyph. Despite Thai language 
   </p>
     <button type="submit">Send</button>
   </p>*/ -->
-  <form name="contact" method="POST" data-netlify="true">
+  <form name="contact" method="POST" data-netlify="true" action="checkout.php">
     <p>
       <label>Name: <input type="text" name="name" /></label>
       <label>Email: <input type="email" name="email" /></label>
