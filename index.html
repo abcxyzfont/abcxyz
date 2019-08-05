@@ -1,388 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>abcxyz</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>abcxyz.wtfs</title>
-
-  <style>
-                      @font-face {
-                      font-family: "g";
-                      src:url('g.woff') format("woff"),url("g.woff2") format("woff2"),
-                      url("g.eot"),url("g.otf") format("opentype");
-                      }
-
-                      @font-face {
-                      font-family: "c";
-                      src:url('c.otf')
-                      }
-
-                      @font-face {
-                      font-family: "e";
-                      src:url('e.otf')
-                      }
-
-                      @font-face {
-                      font-family: "s";
-                      src:url('s.otf')
-                      }
-
-                      @font-face {
-                      font-family: "m";
-                      src:url('m.otf')
-                      }
-
-                      @font-face {
-                      font-family: "r";
-                      src:url('r.otf')
-                      }
-    body{
-    background-color:white;
-    }
-
-    textarea.E{
-    font-family: "e" ,
-    }
-
-
-
-    div.typeEditor{
-      position: absolute;
-      margin: 0 auto;
-      margin-left: 2%;
-      width:750px;
-      /*max width: 750px*/
-      height:300px;
-      -webkit-filter: drop-shadow(5px 5px 15px black);
-      filter: drop-shadow(5px 5px 15px black );
-
-    }
-    div.theRibbon{
-      border-bottom: none;
-      padding:4px;
-      background-color: ;
-      color:white;
-      border-radius: 1em;
-      width:300px;
-
-
-
-    /*-webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
-      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
-
-  }
-
-    /*div.theRibbon:hover{
-      -webkit-filter: blur(0px);
-      -moz-filter: blur(0px);
-      -o-filter: blur(0px);
-      -ms-filter: blur(0px);
-      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
-      transition: 1s;
-      background-color:red ;
-      -webkit-animation: AnimationName 5s ease infinite;
-      -moz-animation: AnimationName 5s ease infinite;
-      animation: AnimationName 5s ease infinite;
-    }*/
-
-
-    @-webkit-keyframes AnimationName {
-        0%{background-color:0% 82%}
-        50%{background-color:100% 19%}
-        100%{background-color:0% 82%}
-    }
-    @-moz-keyframes AnimationName {
-        0%{background-color:0% 82%}
-        50%{background-color:100% 19%}
-        100%{background-color:0% 82%}
-    }
-    @keyframes AnimationName {
-        0%{background-color:0% 82%}
-        50%{background-color:100% 19%}
-        100%{background-color:0% 82%}
-    }
-
-    div.theRibbon > button:hover{
-
-      -webkit-filter: drop-shadow(5px 5px 10px red);
-      filter: drop-shadow(5px 5px 10px red );
-      transition: all 0.5s ;
-
-    }
-
-        input[type=color] {
-        width: 20px;
-        height: 15px;
-        border-radius: 50%;
-        border:0px;
-        outline:none;
-        overflow: hidden;
-        /*background-color:transparent;*/
-
-        }
-
-        input[type=color]::-webkit-color-swatch {
-        border: none;
-        border-radius: 50%;
-        padding: 0;
-        }
-
-        input[type=color]::-webkit-color-swatch-wrapper {
-        border: none;
-        border-radius: 50%;
-        padding: 0;
-        }
-
-    /*div.richTextArea{
-      border: 1.5px solid red;
-      height: 100%;
-      width: 746px;
-      background-color:white;*/
-    }
-
-
-    iframe#theWYSIWYG{
-      height:100%;
-      width:100%
-    }
-
-  .editable {
-  width: 720px;
-  height: 300px;
-  border: 1px solid black;
-  /*overflow: auto;*/
-  overflow: scroll;
-  overflow-x: hidden;
-  padding: 10px;
-  padding-bottom:0px;
-  padding-top:0px;
-  background: white;
-  color:black;
-  font-family:"c";
-  font-weight: normal;
-  font-size:60px;
-  cursor: url("smiley.png") auto;
-}
-
-.editable:hover{
-  background:black;
-  color:white;
-  width:1000px;
-  transition: all 0.5s 
-}
-
-.editable2 {
-width: 720px;
-height: 300px;
-border: 1px solid black;
-/*overflow: auto;*/
-overflow: scroll;
-overflow-x: hidden;
-padding: 10px;
-padding-bottom:0px;
-padding-top:0px;
-background: white;
-color:white;
-font-family:"e";
-font-weight: normal;
-font-size:80px;
-cursor: url("smiley.png") auto;
-}
-
-textarea#styled {
-width: 120%;
-height: 230px;
-border: 1px solid black;
-padding: 5px;
-font-family: "g", "GeeGee", sans-serif;
-font-size: 45px;
-text-align:left;
-color: black;
-letter-spacing: 4px;
-text-transform: uppercase;
-background-color: white;
-background-position: bottom right;
-background-repeat: no-repeat;
-cursor: url("smiley.svg"), auto;
-}
-
-#silver{
-width: 140%;
-height: 220px;
-border: 1px solid black;
-padding: 5px;
-font-family: "s", sans-serif;
-font-size: 45px;
-text-align:left;
-color: black;
-letter-spacing: 4px;
-text-transform: uppercase;
-background-color: white;
-background-position: bottom right;
-background-repeat: no-repeat;
-cursor: url("smiley.svg"), auto;
-}
-
-  </style>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script type="text/javascript" src="script.js"></script>
 </head>
+
+
 <body>
-    ____<b>abcxyz.wtf</b> __purchase__goods__info~<p>
+    <p>____<b>abcxyz.wtf</b> __<a href="#section2">purchase</a>__goods__info~</p>
 
-    <div class="typeEditor" draggable="true">
+  <!--Silvermoon's Sparkling-->
 
-    <div class="theRibbon">
-      <button>Corner</button>
-      <button id="size">size</button>
-        <input type="color" id="fontColorButton" title="Font color">
-      <input type="color" id="TypeboxColor" title="Typebox color">
-    <!--  <select id=fontSizeChanger">
-        <script>
-          for(var i = 8; i < 50; i++) {
-            document.write("<option value=' "+i+"'>"+i+"</option>");
-          }
-      </script>-->
-    </div>
+  <div class="typeEditor" id="one">
+                <div class="theRibbon">
+                    <button>Silvermoon's Sparklin</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" id="buttonone">Refresh</button>
+                </div>
 
-    <div class="richTextArea">
-      <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable">Considered a disadvantage for graphic designers to pursue basic skills to generate work (Cole, 2005: Austin, 2002; Supanun, 2015). Moreover, it is also disconnecting the culture and history reflecting within the Thai typography design itself (Supanun, 2015). Nonetheless, this paper is proposing www.f0nt.com/ (2018), the first typographic public domain website (Iannnnn, 2007), as case study of the most important achieve for Thai digital contemporary typographic history, development and progress.  The research analyzed and classified all typefaces available on the website using method of Wilks and Wyse (2017) with additional context of Thai typography design and usage. The result shows 430 existing typefaces being designed during the past 14 years (2004-2018) with 134,249,910 downloads in total. The highest produced font is script font with 222 fonts available, following by ornamented/novelty and display with 63 and 53 fonts, respectively.
-
+      <textarea spellcheck="false" name="styled-textarea" class="silvermoon" id="sil" id="#rounded-dots" onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
       </textarea>
-
-    <br><br><br><br>
-
-    <div class="richTextArea">
-      <div class="theRibbon">
-        <button>GeeGee</button>
-        <button id="size">size</button>
-          <input type="color" id="fontColorButton" title="Font color">
-        <input type="color" id="TypeboxColor" title="Typebox color">
-
-      </div>
-    <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');"
-    onblur="setbg('white')">Casual Script: a font which imitated the style of hand-lettered comics. It is unashamedly irreverent and unsophisticated. However, it is aimed at children and some users enjoy the optimistic informality of it.
-    </textarea>
     </div>
-  <br><br>
-  <div class="richTextArea" >
-    <div class="theRibbon">
-      <button>Silvermoon's Sparklin</button>
-      <button id="size">size</button>
-        <input type="color" id="fontColorButton" title="Font color">
-      <input type="color" id="TypeboxColor" title="Typebox color">
 
-    </div>
-  <Textarea name="styled-textarea" editable="true" id="silver" onfocus="this.value=''; setbg('#e5fff3');"
-  onblur="setbg('white')" >Casual Script: a font which imitated the style of hand-lettered comics.
-  It is unashamedly irreverent and unsophisticated.
-</textarea>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!--GeeGee-->
+  <div class="typeEditor" id="two">
+                <div class="theRibbon">
+                    <button>Geegee</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction2()">Refresh</button>
+                </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="Geegee" id="gee" onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
   </div>
 
-<br><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--Primate City-->
+  <div class="typeEditor" id="three">
+                <div class="theRibbon">
+                    <button>Primate City</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction3()">Refresh</button>
+                </div>
 
-
-    <div class="theRibbon">
-      <button>Elevator Music</button>
-      <button id="size">size</button>
-        <input type="color" id="fontColorButton" title="Font color">
-      <input type="color" id="TypeboxColor" title="Typebox color">
-    <!--  <select id=fontSizeChanger">
-        <script>
-          for(var i = 8; i < 50; i++) {
-            document.write("<option value=' "+i+"'>"+i+"</option>");
-          }
-      </script>-->
-    </div>
-
-
-
-    <div class="richTextArea">
-      <!-- <div id="theWYSIWYG" name="theWYSIWYG" frameborder="0" contenteditable="true" overflow="scroll">When summer ended the leaves of snapdragons withered taking their shrill-colored mouths with them. They were still, so quiet. They were violet where umber now is. She hated and she hated to see them go. ++++++Flowers born when the weather was good - this she thinks of, watching the branch of peaches daring their ways above the fence, and further, two hummingbirds, hovering, stuck to each other, arcing their bodies in grim determination to find what is good, what is given them to find. These are warriors distancing themselves from history.*********************They find peace in the way they contain the wind and are gone. </div> -->
-      <textarea class="editable2" style="background-color:black;" >In the late 90's, the Thai language has been influenced by Japanese culture (Teeraphon, Berry and Akama, 2012). This illustrated that Thai graphic design has been influenced by the foreign till present with high cultural hybridity. To explore Thai typography, the first record was in Sukhothai period in form of stone inscriptions. It was used for a religious, educational and political purpose, explaining the country’s success. Through imported technology, the printing press has been under the western influence for the first time. Thai letters have been modified in order to support the western mass production and used alongside the English language for the first time. </textarea>
-
-
-
-
-  </div>
-<br><br>
-
-  <div class="richTextArea">
-    <div class="theRibbon">
-      <button>Sonic Mushroom</button>
-      <button id="size">size</button>
-        <input type="color" id="fontColorButton" title="Font color">
-      <input type="color" id="TypeboxColor" title="Typebox color">
-
-      <form name="checkoutForm" method="POST" data-netlify="true" action="/checkout">
-      <input type="text" placeholder="enter email" name="email" />
-
-      <form class="checkout-form" name="checkoutForm"  method="POST" action="checkout.php">
-       <script type="text/javascript" src="https://cdn.omise.co/omise.js"
-               data-key="YOUR_PUBLIC_KEY"
-               data-frame-label="ABCXYZ.WTF"
-               data-frame-description="GeeGee Typeface"
-               data-default-payment-method="internet_banking"
-               data-other-payment-methods="credit_card, paypal, bill_payment_tesco_lotus, alipay, pay_easy,  convenience_store"
-               data-amount="10"
-               data-currency="usd"
-               data-button-label="Purchase">
-       </script>
-     </form>
-
-
-
-
-
-    </div>
-  <textarea style="background-color:white; font-family:'m'; width:700px;height:150px " name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
-  onblur="setbg('white')">In the present, application programs are available to the public and it provides the ability for people to start using layout and symbolic characters on a page. Which initially these
-programs have fixed shape and positioning for each glyph. Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
-  </textarea>
+      <textarea spellcheck="false" name="styled-textarea" class="PrimateCity" id="pri"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
   </div>
 
-<!--four-->
-  <br><br><br><br>
+  <!--Sonic Mushroom-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="typeEditor" id="four">
+                <div class="theRibbon">
+                    <button>Sonic Mushroom</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction4()">Refresh</button>
+                </div>
 
-  <div class="richTextArea">
-    <div class="theRibbon">
-      <button>Marathon</button>
-      <button id="size">size</button>
-        <input type="color" id="fontColorButton" title="Font color">
-      <input type="color" id="TypeboxColor" title="Typebox color">
-
-      <form name="checkoutForm" method="POST" data-netlify="true" action="/checkout">
-      <input type="text" placeholder="enter email" name="email" />
-       </script>
-     </form>
-
-
-
-
-
-    </div>
-  <textarea style="background-color:white; font-family:'r';font-size:90px;width:900px" name="styled-textarea" id="styled" onfocus="this.value=''; setbg('black');"
-  onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
-  </textarea>
+      <textarea spellcheck="false" name="styled-textarea" class="Sonicmushroom" id="son"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
   </div>
+  <!--Elevator Music-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="typeEditor" id="five">
+                <div class="theRibbon">
+                    <button>Elevator Music</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction5()">Refresh</button>
+                </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="ElevatorMusic" id="ele"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
+  </div>
+  <!--Tapeworm-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="typeEditor" id="six">
+                <div class="theRibbon">
+                    <button>Tapeworm</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction6()">Refresh</button>
+                </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="Tapeworm" id="tap"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
+  </div>
+  <!--Marathon-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="typeEditor" id="seven">
+                <div class="theRibbon">
+                    <button>Marathon</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction7()">Refresh</button>
+                </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="Marathon" id="mar"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
+  </div>
+  <!--Corner-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="typeEditor" id="eight">
+                <div class="theRibbon">
+                    <button>Corner</button>
+                    <button id="size">size</button>
+                    <input type="color" id="fontColorButton" title="Font color">
+                    <input type="color" id="TypeboxColor" title="Typebox color">
+                    <button type="button" onclick="myFunction8()">Refresh</button>
+                </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="Corner" id="cor"  onfocus="this.value=''; setbg('black');"
+      onblur="setbg('white')">Despite Thai language being used by almost 100 per cent of its population (Koanatakool, 2009), the implication of the national language has not been widely applied to the digital contemporary typographic design and used to its full-potential.
+      </textarea>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 
 
 
-     <br>
-     <br>
-     <form name="contact" method="POST" data-netlify="true" action="checkout.php">
-       <p>
-         <label>Name: <input type="text" name="name" /></label>
-         <label>Email: <input type="email" name="email" /></label>
-   <button type="submit">Send</button>
-     </form>
-     <br><br>
-</form>
+
+             <!--contact form-->
+             <br>
+             <br>
+             <form name="contact" method="POST" data-netlify="true" action="checkout.php" class="form">
+               <p>
+                 <label>Name: <input type="text" name="name" /></label>
+                 <label>Email: <input type="email" name="email" /></label>
+           <button type="submit">Send</button>
+             </form>
+
+
+   <br><br>
+
+                                 <!--payment-->
+                                 <form class="checkout-form" name="checkoutForm" method="POST" action="checkout.php" id="section2" >
+                                   <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+                                           data-key="YOUR_PUBLIC_KEY"
+                                           data-frame-label="ABCXYZ.WTF"
+                                           data-frame-description="GeeGee Typeface"
+                                           data-default-payment-method="internet_banking"
+                                           data-other-payment-methods="credit_card, paypal, bill_payment_tesco_lotus, alipay, pay_easy,  convenience_store"
+                                           data-amount="10"
+                                           data-currency="usd"
+                                           data-button-label="Purchase">
+                                   </script>
+                                 </form>
+
+                                 <br>
+                                 <br>
+                                 <br>
+                                <br>
+
+
+<img class=bgone src="gifs/giphy.gif">
+<img class=bgtwo src="gifs/giphy2.gif">
+<img class=box src="gifs/giphy3.gif">
+
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+
 </html>
