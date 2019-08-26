@@ -31,7 +31,7 @@
   <!--Silvermoon's Sparkling-->
   <div class="typeEditor" id="one">
             <div class="typemenu">
-              <!-- Color Picker for Silvermoons -->
+              <!-- Size Picker for Silvermoons -->
             <button class="font-button">Silvermoon's Sparklin</button>
                   <button class="resize"><select id="size1">size>
                     <option value="<34></34>">size</option>
@@ -495,6 +495,62 @@ is being born</textarea>
       <textarea spellcheck="false" name="styled-textarea" class="typebox" id="corner" id="cor"
       >Baby there's a price +++ to pay +++++ I'm a genie in a bottle ++You gotta rub me the right way +</textarea>
   </div>
+  <!--end of corner-->
+
+  <!--Corner-->
+  <div class="typeEditor" id="nine">
+                <div class="typemenu">
+                    <button class="font-button">pat</button>
+                    <button class="resize"><select id="size9">size>
+                      <option value="45">size</option>
+                      <option value="12">12</option>
+                      <option value="18">18</option>
+                      <option value="24">24</option>
+                      <option value="30">30</option>
+                      <option value="36">36</option>
+                      <option value="42">42</option>
+                      <option value="48">48</option>
+                      <option value="54">54</option>
+                      <option value="60">60</option>
+                      <option value="72">72</option>
+                      <option value="84">84</option>
+                      <option value="120">120</option>
+                    </select>
+                  </button>
+                                <button id="btn-type-color-picker-pat" class="btn btn-primary btn-md">Color</button>
+                                <script type="text/javascript">
+                                $('#btn-type-color-picker-pat').colorpicker();
+                                $('#btn-type-color-picker-pat').colorpicker().on('changeColor', function() {
+                                    $('#pat').css('color',$(this).colorpicker('getValue', '#ffffff') );
+                                });
+                                </script>
+
+                                <button id="btn-color-picker-pat" class="btn btn-primary btn-md">Background</button>
+                                <script type="text/javascript">
+                                $('#btn-color-picker-pat').colorpicker();
+                                $('#btn-color-picker-pat').colorpicker().on('changeColor', function() {
+                                    $('#pat').css('background-color',$(this).colorpicker('getValue', '#ffffff') );
+                                });</script>
+
+                                          <!-- Text Refresher for Corner -->
+                                          <button type="button" id="button-9">Refresh</button>
+                                          <script type="text/javascript">
+                                          //Random word generator
+                                          function Wordbank9() {
+                                           message = ["sdasdasasdku aksdh kashdjkas dkjahsjkdha sd ajsdhkjasdhjashdjkahskjdhasdhas jashd asdjhasjd asjh as","A b b c c d d e e f f g g h h i i j j k k l l m m n n o o p p q q r r s s t t u u v v w w x x y y z z . .1 2 3 4 5 6 7 8 9 0 ","so i guess +++the ++++++++++++ fortune teller's +++RIGHT++++ should have seen ++++++++ ++++  just what was there +and not+++ ++++++++++some holy light++++"];
+                                           return message[Math.floor(Math.random() * message.length)];
+                                          };
+                                          //Reset button
+                                          $('#button-9').click(function(){
+                                              $('#pat').val(Wordbank9());
+                                          });
+                                          </script>
+                          </div>
+
+      <textarea spellcheck="false" name="styled-textarea" class="typebox" id="pat" id="cor"
+      >sdasdasasdku aksdh kashdjkas dkjahsjkdha sd ajsdhkjasdhjashdjkahskjdhasdhas jashd asdjhasjd asjh as</textarea>
+  </div>
+  <!--end of corner-->
 
 
 
@@ -548,6 +604,25 @@ Geegee
 <img class=bgtwo src="gifs/LOVE-ME.gif">
 <img id="kittenn" src="ggifs/giphy3.gif">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript">
 
   //To change FONT sizes
@@ -582,6 +657,10 @@ Geegee
   $("#size8")
   .change(function() {
   $('#corner').css("font-size", $(this).val() + "pt");
+  });
+  $("#size9")
+  .change(function() {
+  $('#pat').css("font-size", $(this).val() + "pt");
   });
 
 
